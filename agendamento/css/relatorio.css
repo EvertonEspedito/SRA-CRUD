@@ -1,0 +1,271 @@
+/* ===============================
+   GERAL
+================================ */
+body {
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background: #f3f4f6;
+    margin: 0;
+}
+
+h2, h3 {
+    margin-top: 20px;
+    color: #111827;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+/* ===============================
+   FORM RELATÓRIO
+================================ */
+.form-relatorio {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: flex-end;
+    margin-bottom: 20px;
+}
+
+.form-relatorio label {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.form-relatorio input {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #d1d5db;
+}
+
+/* ===============================
+   BOTÕES
+================================ */
+.btn,
+.btn-relatorio,
+.btn-pdf {
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.btn {
+    background: #2563eb;
+    color: #fff;
+}
+
+.btn:hover {
+    background: #1e40af;
+}
+
+.btn-relatorio {
+    background: #10b981;
+    color: #fff;
+}
+
+.btn-relatorio:hover {
+    background: #059669;
+}
+
+.btn-pdf {
+    background: #ef4444;
+    color: #fff;
+    margin-left: 10px;
+}
+
+.btn-pdf:hover {
+    background: #b91c1c;
+}
+
+/* ===============================
+   CARDS
+================================ */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.card {
+    background: #f9fafb;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.card h4 {
+    margin-bottom: 8px;
+    color: #374151;
+}
+
+.card p {
+    font-size: 26px;
+    font-weight: bold;
+    color: #111827;
+}
+
+.card.aceito {
+    border-left: 6px solid #10b981;
+}
+
+.card.pendente {
+    border-left: 6px solid #f59e0b;
+}
+
+.card.recusado {
+    border-left: 6px solid #ef4444;
+}
+
+/* ===============================
+   GRÁFICO
+================================ */
+.grafico {
+    display: flex;
+    gap: 25px;
+    align-items: flex-end;
+    height: 220px;
+    padding: 20px;
+    background: #f9fafb;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.barra {
+    width: 80px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 6px 6px 0 0;
+}
+
+.barra.aceito {
+    background: #10b981;
+}
+
+.barra.pendente {
+    background: #f59e0b;
+}
+
+.barra.recusado {
+    background: #ef4444;
+}
+
+/* ===============================
+   STATUS
+================================ */
+.status {
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.status.aceito {
+    background: #10b981;
+}
+
+.status.pendente {
+    background: #f59e0b;
+}
+
+.status.recusado {
+    background: #ef4444;
+}
+
+/* ===============================
+   TABELA
+================================ */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th {
+    background: #1f2937;
+    color: #fff;
+    padding: 12px;
+    font-size: 14px;
+}
+
+table td {
+    padding: 12px;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 14px;
+}
+
+table tr:hover {
+    background: #f9fafb;
+}
+
+/* ===============================
+   IMPRESSÃO / PDF
+================================ */
+@media print {
+
+    header,
+    footer,
+    .form-relatorio,
+    .btn,
+    .btn-relatorio,
+    .btn-pdf {
+        display: none;
+    }
+
+    body {
+        background: #fff;
+    }
+
+    .container {
+        box-shadow: none;
+        border-radius: 0;
+    }
+}
+
+.grafico {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 50px;
+    height: 260px;
+    padding: 20px;
+    background: #f9fafb;
+    border-radius: 12px;
+}
+
+.coluna {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.coluna span {
+    margin-top: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #374151;
+}
+
+.barra {
+    width: 70px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 8px 8px 0 0;
+    padding-bottom: 5px;
+}

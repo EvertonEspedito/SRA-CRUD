@@ -1,0 +1,137 @@
+h2 {
+    margin-bottom: 15px;
+    color: #111827;
+    text-align: center  ;
+}
+
+h3 {
+    margin: 20px 0 10px;
+    color: #374151;
+}
+
+
+
+/* BOTÃO AGENDAR */
+.btn-agendar {
+    display: inline-block;
+    margin-bottom: 15px;
+    padding: 10px 16px;
+    background: #16a34a;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    margin: 0 auto;
+}
+
+.btn-agendar:hover {
+    background: #15803d;
+}
+
+/* TABELA */
+table {
+    width: 100%;
+    background: #ffffff;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    padding: 26px;
+}
+
+table th, table td {
+    padding: 12px;
+    border-bottom: 1px solid #e5e7eb;
+    text-align: center;
+}
+
+table th {
+    background: #f3f4f6;
+    font-weight: 600;
+}
+
+/* STATUS */
+.status {
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.status.pendente {
+    background: #fde68a;
+    color: #92400e;
+}
+
+.status.aprovado {
+    background: #bbf7d0;
+    color: #166534;
+}
+
+.status.rejeitado {
+    background: #fecaca;
+    color: #991b1b;
+}
+
+/* BOTÃO CANCELAR */
+.btn-cancelar-agendamento {
+    color: #dc2626;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.btn-cancelar:hover {
+    text-decoration: underline;
+}
+
+
+/* BOTÃO EDITAR */
+.btn-editar {
+    color: #2563eb;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.btn-editar:hover {
+    text-decoration: underline;
+}
+
+/* FORM EDITAR */
+.form-editar {
+    max-width: 420px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.form-editar label {
+    display: block;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.form-editar input,
+.form-editar select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #d1d5db;
+}
+
+.btn-salvar {
+    margin-top: 15px;
+    width: 100%;
+    padding: 12px;
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-salvar:hover {
+    background: #1e40af;
+}

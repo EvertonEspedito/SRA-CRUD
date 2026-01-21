@@ -1,0 +1,126 @@
+/* TÍTULO DA PÁGINA */
+h2 {
+    margin-bottom: 20px;
+    color: #111827;
+    font-size: 24px;
+    text-align: center;
+}
+
+/* TABELA */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+
+}
+
+/* CABEÇALHO */
+table thead tr,
+table tr:first-child {
+    background: #1f2933;
+}
+
+table th {
+    color: #ffffff;
+    padding: 12px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+
+}
+
+/* LINHAS */
+table td {
+    padding: 12px;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 14px;
+    color: #374151;
+}
+
+table tr:hover {
+    background: #f9fafb;
+}
+
+/* STATUS */
+td:nth-child(5) {
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+td:nth-child(5):contains("aprovado") {
+    color: #16a34a;
+}
+
+td:nth-child(5):contains("recusado") {
+    color: #dc2626;
+}
+
+td:nth-child(5):contains("pendente") {
+    color: #ca8a04;
+}
+
+/* AÇÕES */
+td a {
+    display: inline-block;
+    padding: 6px 10px;
+    margin: 2px 0;
+    border-radius: 5px;
+    font-size: 13px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+/* BOTÕES */
+a[href*="aprovado"] {
+    background: #16a34a;
+    color: #fff;
+}
+
+a[href*="recusado"] {
+    background: #dc2626;
+    color: #fff;
+}
+
+a[href*="excluir"] {
+    background: #374151;
+    color: #fff;
+}
+
+td a:hover {
+    opacity: 0.85;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    table tr {
+        margin-bottom: 15px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+
+    table td {
+        padding: 10px;
+        border: none;
+        position: relative;
+    }
+
+    table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+        color: #111827;
+    }
+
+    table th {
+        display: none;
+    }
+}
