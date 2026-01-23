@@ -2,19 +2,23 @@
 <link rel="stylesheet" href="/agendamento/css/home.css">
 <link rel="stylesheet" href="/agendamento/css/style.css"> <!-- Inclua o estilo principal -->
 
-<section class="hero">
-    <div class="hero-content">
-        <h1>Sistema de Agendamentos Acadêmicos</h1>
-        <p>
-            Organize seus horários, gerencie atendimentos e facilite o agendamento
-            de forma rápida, simples e segura.
-        </p>
 
-        <div class="hero-buttons">
-            <a href="login.php" class="btn btn-primary">Login</a>
+<section class="hero">
+    <div class= "layer">
+        <div class="hero-content">
+            <h1>Sistema de Agendamentos Acadêmicos</h1>
+            <p>
+                Organize seus horários, gerencie atendimentos e facilite o agendamento
+                de forma rápida, simples e segura.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="login.php" class="btn btn-primary">Login</a>
+            </div>
         </div>
-    </div>
+    </div> <!-- Fechando a div container do header.php -->    
 </section>
+
 
 <section class="features">
     <h2>O que você pode fazer</h2>

@@ -17,13 +17,14 @@ session_start();
 <header class="header">
     <div class="header-container">
         <div class="logo">
-            <a href="/agendamento/index.php">📅 Sistema de Agendamentos Acadêmicos</a>
+            <a href="/agendamento/home.php">📅 Sistema de Agendamentos Acadêmicos</a>
         </div>
 
         <nav class="menu">
             <!-- Se o usuario estiver deslogado e clicar em inicio, vai para home.php, caso o contrario vai para o painel -->
             <?php if(!isset($_SESSION['usuario_id'])): ?>
                 <a href="/agendamento/home.php">Inicio</a>
+                
             <?php else: ?>
                 <a href="/agendamento/<?php echo strtolower($_SESSION['usuario_tipo']); ?>/painel.php">Painel</a>
             <?php endif; ?>

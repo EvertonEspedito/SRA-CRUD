@@ -1,4 +1,3 @@
-/* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -14,8 +13,16 @@ body {
 
 /* HERO */
 .hero {
-    min-height: 90vh;
-    background: linear-gradient(135deg, #2c4764, #485b61, #3a4145);
+    /* garante que overlay posicione relativo à hero */
+    position: relative;
+    /* considera header fixo (ajuste 70px se seu header tiver outra altura) */
+    min-height: calc(100vh - 70px);
+    height: 100vh;
+    background-image: url("../includes/img/back.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -25,6 +32,9 @@ body {
 }
 
 .hero-content {
+    /* garante que o conteúdo fique acima da layer */
+    position: relative;
+    z-index: 2;
     max-width: 700px;
 }
 
@@ -39,12 +49,31 @@ body {
     margin-bottom: 35px;
 }
 
+/* Sobreposição escura */
+.layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* overlay acima do background */
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    /* centraliza o conteúdo quando a layer contém .hero-content */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    pointer-events: auto; 
+}
+
 /* Botões */
 .hero-buttons {
     display: flex;
     justify-content: center;
     gap: 15px;
     flex-wrap: wrap;
+    
 }
 
 .btn {
@@ -97,11 +126,12 @@ body {
 }
 
 .feature-card {
-    background-color: #f4f6f8;
+    background-color: #38485a;
     padding: 30px 20px;
     border-radius: 12px;
     box-shadow: 0 6px 18px rgba(0,0,0,0.08);
     transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
 .feature-card:hover {
@@ -111,11 +141,12 @@ body {
 .feature-card h3 {
     margin-bottom: 15px;
     font-size: 20px;
+    color: white;
 }
 
 .feature-card p {
     font-size: 15px;
-    color: #555;
+    color: #f6f6f6;
 }
 
 /* CTA */
@@ -144,5 +175,12 @@ body {
 
     .features h2 {
         font-size: 26px;
+    }
+
+    /* background-attachment fixed causa problemas em muitos celulares */
+    .hero {
+        background-attachment: scroll;
+        min-height: auto;
+        padding-top: 80px; /* se houver header fixo, ajuste conforme necessário */
     }
 }
