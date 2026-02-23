@@ -72,4 +72,4 @@ Licença
 - Projeto para fins educacionais — adapte conforme necessário.
 
 Contato
-- Abra uma issue ou edite os arquivos diretamente no diretório do
+- Abra uma issue ou edite os arquivos diretamente no diretório do Projeto
